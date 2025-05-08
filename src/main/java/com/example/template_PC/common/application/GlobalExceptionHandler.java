@@ -24,7 +24,7 @@ public class GlobalExceptionHandler {
 
     @ExceptionHandler(MethodArgumentNotValidException.class)
     public ResponseEntity<ResponseStatusDto> handleMethodArgumentNotValidException(MethodArgumentNotValidException e) {
-        FieldError firstError = e.getFieldErrors().getFirst();
+        FieldError firstError = e.getFieldErrors().get(0);
 
         ResponseStatusDto response = new ResponseStatusDto();
         response.setStatus(HttpStatus.BAD_REQUEST.value());
