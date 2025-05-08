@@ -3,15 +3,15 @@ package com.example.template_PC.auth.domain;
 import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.stereotype.Service;
 
-import jakarta.transaction.Transactional;
+import com.example.template_PC.common.exception.UnauthorizedException;
+import com.example.template_PC.jwt.domain.JwtService;
+import com.example.template_PC.jwt.dto.JwtAuthLoginDto;
+import com.example.template_PC.jwt.dto.JwtAuthResponseDto;
+import com.example.template_PC.user.domain.User;
+import com.example.template_PC.user.domain.UserService;
+import com.example.template_PC.user.dto.CreateUserDto;
 
-import org.sparky.sparkyai.common.exception.UnauthorizedException;
-import org.sparky.sparkyai.jwt.domain.JwtService;
-import org.sparky.sparkyai.jwt.dto.JwtAuthLoginDto;
-import org.sparky.sparkyai.jwt.dto.JwtAuthResponseDto;
-import org.sparky.sparkyai.user.domain.User;
-import org.sparky.sparkyai.user.domain.UserService;
-import org.sparky.sparkyai.user.dto.CreateUserDto;
+import jakarta.transaction.Transactional;
 
 import lombok.RequiredArgsConstructor;
 
@@ -36,8 +36,8 @@ public class AuthService {
         return response;
     }
 
-    public JwtAuthResponseDto jwtRegisterSparkyAdmin(CreateUserDto userDto) {
-        User user = userService.createSparkyAdminUser(userDto);
+    public JwtAuthResponseDto jwtRegisterAdmin(CreateUserDto userDto) {
+        User user = userService.createAdminUser(userDto);
 
         JwtAuthResponseDto response = new JwtAuthResponseDto();
         response.setToken(jwtService.generateToken(user));

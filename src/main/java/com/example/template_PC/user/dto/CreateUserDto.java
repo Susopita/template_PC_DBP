@@ -1,11 +1,11 @@
-package com.example.template_PC.jwt.dto;
+package com.example.template_PC.user.dto;
 
 import jakarta.validation.constraints.NotBlank;
 import jakarta.validation.constraints.NotNull;
 import lombok.Data;
 
 @Data
-public class JwtAuthLoginDto {
+public class CreateUserDto {
 
     @NotNull
     @NotBlank
@@ -14,4 +14,5 @@ public class JwtAuthLoginDto {
     @NotNull
     @NotBlank
     private String password;
+
 }

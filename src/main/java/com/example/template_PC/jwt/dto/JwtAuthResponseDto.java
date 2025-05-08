@@ -1,4 +1,4 @@
-package org.sparky.sparkyai.jwt.dto;
+package com.example.template_PC.jwt.dto;
 
 import lombok.Data;
 
