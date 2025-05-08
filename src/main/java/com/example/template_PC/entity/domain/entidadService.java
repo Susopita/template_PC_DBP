@@ -1,15 +1,11 @@
 package com.example.template_PC.entity.domain;
 
 import jakarta.transaction.Transactional;
-import org.hibernate.query.Page;
-import org.springframework.data.jpa.domain.Specification;
 import org.springframework.stereotype.Service;
 
 import com.example.template_PC.entity.infrastructure.entidadRepository;
 
-import java.awt.print.Pageable;
 import java.util.List;
-import java.util.Map;
 import java.util.Optional;
 
 @Service

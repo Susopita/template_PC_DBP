@@ -1,4 +1,4 @@
-package org.sparky.sparkyai.auth.domain;
+package com.example.template_PC.auth.domain;
 
 import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.stereotype.Service;

@@ -1,4 +1,4 @@
-package org.sparky.sparkyai.jwt.domain;
+package com.example.template_PC.jwt.domain;
 
 import java.security.Key;
 import java.util.Date;
@@ -12,8 +12,8 @@ import org.springframework.security.core.context.SecurityContextHolder;
 import org.springframework.security.core.userdetails.UserDetails;
 import org.springframework.stereotype.Service;
 
-import org.sparky.sparkyai.user.domain.User;
-import org.sparky.sparkyai.user.domain.UserService;
+import com.example.template_PC.user.domain.User;
+import com.example.template_PC.user.domain.UserService;
 
 import io.jsonwebtoken.Claims;
 import io.jsonwebtoken.Jwts;

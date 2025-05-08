@@ -1,4 +1,4 @@
-package org.sparky.sparkyai.jwt.domain;
+package com.example.template_PC.jwt.domain;
 
 import java.io.IOException;
 
