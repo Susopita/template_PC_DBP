@@ -1,7 +1,8 @@
-package com.example.template_PC.application;
+package com.example.template_PC.entity.application;
 
-import com.example.template_PC.domain.entidad;
-import com.example.template_PC.infrastructure.entidadRepository;
+import com.example.template_PC.entity.domain.entidad;
+import com.example.template_PC.entity.infrastructure.entidadRepository;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;

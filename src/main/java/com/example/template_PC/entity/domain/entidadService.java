@@ -1,11 +1,11 @@
-package com.example.template_PC.domain;
+package com.example.template_PC.entity.domain;
 
-
-import com.example.template_PC.infrastructure.entidadRepository;
 import jakarta.transaction.Transactional;
 import org.hibernate.query.Page;
 import org.springframework.data.jpa.domain.Specification;
 import org.springframework.stereotype.Service;
+
+import com.example.template_PC.entity.infrastructure.entidadRepository;
 
 import java.awt.print.Pageable;
 import java.util.List;
@@ -55,11 +55,9 @@ public class entidadService {
                 }).orElse(false);
     }
 
-
     public List<entidad> buscarPorNombre(String keyword) {
         return repository.findByNombreContainingIgnoreCase(keyword);
     }
-
 
     // Métodos especializados
     @Transactional

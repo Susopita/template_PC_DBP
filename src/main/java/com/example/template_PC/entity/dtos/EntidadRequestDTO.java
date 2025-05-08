@@ -1,4 +1,4 @@
-package com.example.template_PC.dtos;
+package com.example.template_PC.entity.dtos;
 
 import jakarta.validation.constraints.*;
 import lombok.AllArgsConstructor;
